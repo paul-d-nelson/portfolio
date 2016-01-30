@@ -1,1 +1,3 @@
-console.log 'hello there!'
+smartquotes = require('smartquotes')
+
+smartquotes()
