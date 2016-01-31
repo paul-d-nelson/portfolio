@@ -12,9 +12,32 @@ html
 			title Paul Nelson's portfolio
 		!= css()
 
-		include ./includes/header.jade
-
 	body
-		block content
+		//- include ./includes/_header.jade
+		block header
+			header
+				// Logo
+				div.logo
+					| Paul Nelson
+
+				// Navigation
+				nav.nav
+					a#menu-toggle(href='#') Menu
+					ul.nav-toggle#menu
+						li
+							a(href='#') Home
+						li
+							a(href='#') Home
+						li
+							a(href='#') Home
+						li
+							a(href='#') Home
+						li
+							a(href='#') Home
+
+		main
+			block fold
+
+			block content
 
 	script(src='js/build.js')
