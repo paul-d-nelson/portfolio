@@ -1,5 +1,6 @@
 axis         = require 'axis'
 rupture      = require 'rupture'
+jeet         = require 'jeet'
 autoprefixer = require 'autoprefixer-stylus'
 browserify   = require 'roots-browserify'
 css_pipeline = require 'css-pipeline'
@@ -13,4 +14,4 @@ module.exports =
   ]
 
   stylus:
-    use: [axis(), rupture(), autoprefixer()]
+    use: [axis(), rupture(), jeet(), autoprefixer()]

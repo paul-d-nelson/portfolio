@@ -23,14 +23,22 @@ block content
 	section#contact
 		h2 Contact
 
-		form#contact-form(method='post', action='mailer.php')
-			label(for='email') Email
-			input(type='email', name='email', required)
+		#form-messages
 
-			label(for='name') Name
-			input(type='text', name='name', required)
+		form#form-contact(method='post', action='process.php')
+			.form-field
+				label(for='email') Email
+				input(type='email', name='email', id='email', required)
 
-			label(for='message') Message
-			textarea(name='message', required)
+			.form-field
+				label(for='name') Name
+				input(type='text', name='name', id='name', required)
 
-			input(type='submit')
+			.form-field
+				label(for='message') Message
+				textarea(name='message', id='message', required)
+
+			.g-recaptcha(data-sitekey='6LdMNxcTAAAAAB1Oo76b0Jpci3cErw44B0XL1HIY')
+
+			.form-field
+				input(type='submit')
