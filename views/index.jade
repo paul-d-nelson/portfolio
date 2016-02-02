@@ -22,3 +22,15 @@ block content
 
 	section#contact
 		h2 Contact
+
+		form#contact-form(method='post', action='mailer.php')
+			label(for='email') Email
+			input(type='email', name='email', required)
+
+			label(for='name') Name
+			input(type='text', name='name', required)
+
+			label(for='message') Message
+			textarea(name='message', required)
+
+			input(type='submit')
