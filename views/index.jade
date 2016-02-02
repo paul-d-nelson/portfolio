@@ -1,9 +1,24 @@
 extends layout
 
 block fold
-	img(src='img/road.jpg' width='1920' height='1080')
+	.fold
+		p My name is Paul Nelson, and I am a web developer dedicated to creative solutions.
 
 block content
-	h1 Welcome to roots!
-	:marked
-		Find tutorials and "documentation" at http://roots.cx : )
+	section#work
+		h2 Work
+
+		:marked
+			I have experience creating static and dynamic websites using many different technologies, such as WordPress and PHP.
+
+			* [ResoundCreative.com](portfolio/resoundcreative)
+			* [MaxFitStrong.com](portfolio/maxfit)
+			* [Brewski Brews](portfolio/brewski)
+
+	section#about
+		h2 About
+
+		include:marked ../sections/_about.md
+
+	section#contact
+		h2 Contact
