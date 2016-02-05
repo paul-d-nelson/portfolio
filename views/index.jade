@@ -1,44 +1,56 @@
 extends layout
 
+block nav
+  li
+    a(href='#work') Work
+  li
+    a(href='#about') About
+  li
+    a(href='#contact') Contact
+  li
+    a(href='#') Home
+  li
+    a(href='#') Home
+
 block fold
-	.fold
-		p My name is Paul Nelson, and I am a web developer dedicated to creative solutions.
+  .fold
+    p My name is Paul Nelson, and I am a web developer dedicated to creative solutions.
 
 block content
-	section#work
-		h2 Work
+  section#work
+    h2 Work
 
-		:marked
-			I have experience creating static and dynamic websites using many different technologies, such as WordPress and PHP.
+    :marked
+      I have experience creating static and dynamic websites using many different technologies, such as WordPress and PHP.
 
-			* [ResoundCreative.com](portfolio/resoundcreative)
-			* [MaxFitStrong.com](portfolio/maxfit)
-			* [Brewski Brews](portfolio/brewski)
+      * [ResoundCreative.com](portfolio/resoundcreative)
+      * [MaxFitStrong.com](portfolio/maxfit)
+      * [Brewski Brews](portfolio/brewski)
 
-	section#about
-		h2 About
+  section#about
+    h2 About
 
-		include:marked ../sections/_about.md
+    include:marked ../sections/_about.md
 
-	section#contact
-		h2 Contact
+  section#contact
+    h2 Contact
 
-		#form-messages
+    #form-messages
 
-		form#form-contact(method='post', action='process.php')
-			.form-field
-				label(for='email') Email
-				input(type='email', name='email', id='email', required)
+    form#form-contact(method='post', action='process.php')
+      .form-field
+        label(for='email') Email
+        input(type='email', name='email', id='email', required)
 
-			.form-field
-				label(for='name') Name
-				input(type='text', name='name', id='name', required)
+      .form-field
+        label(for='name') Name
+        input(type='text', name='name', id='name', required)
 
-			.form-field
-				label(for='message') Message
-				textarea(name='message', id='message', required)
+      .form-field
+        label(for='message') Message
+        textarea(name='message', id='message', required)
 
-			.g-recaptcha(data-sitekey='6LdMNxcTAAAAAB1Oo76b0Jpci3cErw44B0XL1HIY')
+      .g-recaptcha(data-sitekey='6LdMNxcTAAAAAB1Oo76b0Jpci3cErw44B0XL1HIY')
 
-			.form-field
-				input(type='submit')
+      .form-field
+        input(type='submit')

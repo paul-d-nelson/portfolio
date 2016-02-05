@@ -1,48 +1,49 @@
 doctype html
 html
 
-	head
-		meta(charset='utf8')
-		meta(http-equiv='X-UA-Compatible', content='IE=edge, chrome=1')
-		meta(name='description', content='description of your site')
-		meta(name='author', content= "author of the site")
-		//- uncomment if your site is responsive!
-		meta(name="viewport" content="width=device-width, initial-scale=1")
-		script(src='https://www.google.com/recaptcha/api.js', async, defer)
-		block title
-			title Paul Nelson's portfolio
-		!= css()
+  head
+    meta(charset='utf8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge, chrome=1')
+    meta(name='description', content='description of your site')
+    meta(name='author', content= "author of the site")
+    //- uncomment if your site is responsive!
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    script(src='https://www.google.com/recaptcha/api.js', async, defer)
+    block title
+      title Paul Nelson's portfolio
+    != css()
 
-	body
-		//- include ./includes/_header.jade
-		block header
-			header
-				// Logo
-				div.logo
-					| Paul Nelson
+  body
+    //- include ./includes/_header.jade
+    block header
+      header
+        // Logo
+        div.logo
+          | Paul Nelson
 
-				// Navigation
-				nav.nav
-					a#menu-toggle(href='#') Menu
-					ul.nav-toggle#menu
-						li
-							a(href='#') Home
-						li
-							a(href='#') Home
-						li
-							a(href='#') Home
-						li
-							a(href='#') Home
-						li
-							a(href='#') Home
+        // Navigation
+        nav#nav
+          a#menu-toggle(href='#') Menu
+          ul.nav-toggle#menu
+            block nav
+              li
+                a(href='#') Home
+              li
+                a(href='#') Home
+              li
+                a(href='#') Home
+              li
+                a(href='#') Home
+              li
+                a(href='#') Home
 
-		main(role='main')
-			block fold
+    main(role='main')
+      block fold
 
-			block content
+      block content
 
-		block footer
-			footer
-				p This is the footer.
+    block footer
+      footer
+        p This is the footer.
 
-	script(src='js/build.js')
+  script(src='js/build.js')

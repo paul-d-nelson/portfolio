@@ -1,12 +1,13 @@
-$ 					= require('jquery')
-smartquotes = require('smartquotes')
+smartquotes	= require('smartquotes')
+$						= require('jquery')
 
-smartquotes()
+# smartquotes()
 
 # AJAX Form
 
 # Get the form.
 form = $('#form-contact')
+
 # Get the messages div.
 formMessages = $('#form-messages')
 
@@ -14,6 +15,7 @@ formMessages = $('#form-messages')
 $(form).submit (event) ->
 	# Stop the browser from submitting the form.
 	event.preventDefault()
+
 	# Serialize the form data.
 	formData = $(form).serialize()
 
@@ -25,8 +27,10 @@ $(form).submit (event) ->
 		# Make sure that the formMessages div has the 'success' class.
 		$(formMessages).removeClass 'error'
 		$(formMessages).addClass 'success'
+
 		# Set the message text.
 		$(formMessages).text response
+
 		# Clear the form.
 		$('#name').val ''
 		$('#email').val ''
@@ -36,6 +40,7 @@ $(form).submit (event) ->
 		# Make sure that the formMessages div has the 'error' class.
 		$(formMessages).removeClass 'success'
 		$(formMessages).addClass 'error'
+
 		# Set the message text.
 		if data.responseText != ''
 			$(formMessages).text data.responseText
