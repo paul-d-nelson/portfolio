@@ -4,15 +4,31 @@
 
 normalize-css()
 base()
+text-selection()
 
 // Remove when done editing
-edit()
+// edit()
+
+html
+  font-size 62.5%
 
 body
-	padding: 50px
+  // padding: 50px
+  font-size 1.6rem
+
+// Main navigation
+#nav
+  max-width 40%
+  ul
+    inline-list 40px
+    a
+      reset-link()
 
 h1
 h2
 h3
-	font-family $roboto-slab
-	font-weight normal
+  font-family $roboto-slab
+  font-weight normal
+
+section
+  center 720px
