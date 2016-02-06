@@ -7,41 +7,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/D/dev/paul/portfolio/views/layout.jade",
-			"settings":
-			{
-				"buffer_size": 998,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/D/dev/paul/portfolio/portfolio.sublime-project",
-			"settings":
-			{
-				"buffer_size": 121,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "extends layout\n\nblock nav\n	li\n		a(href='#work') Work\n	li\n		a(href='#about') About\n	li\n		a(href='#contact') Contact\n	li\n		a(href='#') Home\n	li\n		a(href='#') Home\n\nblock fold\n	.fold\n		p My name is Paul Nelson, and I am a web developer dedicated to creative solutions.\n\nblock content\n	section#work\n		h2 Work\n\n		:marked\n			I have experience creating static and dynamic websites using many different technologies, such as WordPress and PHP.\n\n			* [ResoundCreative.com](portfolio/resoundcreative)\n			* [MaxFitStrong.com](portfolio/maxfit)\n			* [Brewski Brews](portfolio/brewski)\n\n	section#about\n		h2 About\n\n		include:marked ../sections/_about.md\n\n	section#contact\n		h2 Contact\n\n		#form-messages\n\n		form#form-contact(method='post', action='process.php')\n			.form-field\n				label(for='email') Email\n				input(type='email', name='email', id='email', required)\n\n			.form-field\n				label(for='name') Name\n				input(type='text', name='name', id='name', required)\n\n			.form-field\n				label(for='message') Message\n				textarea(name='message', id='message', required)\n\n			.g-recaptcha(data-sitekey='6LdMNxcTAAAAAB1Oo76b0Jpci3cErw44B0XL1HIY')\n\n			.form-field\n				input(type='submit')\n",
-			"file": "/D/dev/paul/portfolio/views/index.jade",
-			"file_size": 1225,
-			"file_write_time": 130990993397004595,
-			"settings":
-			{
-				"buffer_size": 1168,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/D/dev/paul/portfolio/assets/css/master.styl",
-			"settings":
-			{
-				"buffer_size": 212,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -91,22 +56,50 @@
 		"/D/dev/paul/portfolio",
 		"/D/dev/paul/portfolio/assets",
 		"/D/dev/paul/portfolio/assets/css",
+		"/D/dev/paul/portfolio/assets/css/base",
+		"/D/dev/paul/portfolio/assets/css/components",
+		"/D/dev/paul/portfolio/assets/css/layout",
+		"/D/dev/paul/portfolio/assets/css/utils",
+		"/D/dev/paul/portfolio/assets/css/vendors",
 		"/D/dev/paul/portfolio/assets/js",
-		"/D/dev/paul/portfolio/node_modules/smartquotes",
-		"/D/dev/paul/portfolio/node_modules/smartquotes/src",
-		"/D/dev/paul/portfolio/public",
-		"/D/dev/paul/portfolio/sections",
-		"/D/dev/paul/portfolio/views"
+		"/D/dev/paul/portfolio/public/css",
+		"/D/dev/paul/portfolio/views",
+		"/D/dev/paul/portfolio/views/includes"
 	],
 	"file_history":
 	[
-		"/C/Users/paulj/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/D/dev/paul/portfolio/views/layout.jade",
+		"/C/Users/paulj/AppData/Local/Temp/Temp1_CreativeLinkEffects.zip/CreativeLinkEffects/css/component.css",
+		"/D/dev/paul/portfolio/views/index.jade",
+		"/D/Dev/paul/portfolio/assets/css/layout/_header.styl",
+		"/D/dev/paul/portfolio/assets/css/base/_typography.styl",
+		"/D/Dev/paul/portfolio/assets/css/utils/_mixins.styl",
+		"/D/dev/paul/portfolio/assets/css/main.styl",
+		"/D/Dev/paul/portfolio/views/includes/_mixins.jade",
+		"/D/Dev/paul/portfolio/assets/css/layout/_body.styl",
+		"/D/dev/paul/portfolio/assets/js/main.coffee",
+		"/D/dev/paul/portfolio/assets/css/utils/index.styl",
+		"/D/dev/paul/portfolio/assets/css/vendors/index.styl",
+		"/D/dev/paul/portfolio/assets/css/layout/index.styl",
+		"/D/Dev/paul/portfolio/assets/css/base/_colors.styl",
+		"/D/dev/paul/portfolio/assets/css/base/_sizes.styl",
+		"/D/dev/paul/portfolio/assets/css/base/index.styl",
 		"/D/dev/paul/portfolio/app.production.coffee",
 		"/D/dev/paul/portfolio/app.coffee",
+		"/D/Dev/paul/portfolio/assets/css/base/_reset.styl",
+		"/D/Dev/paul/portfolio/assets/css/vendors/index.styl",
+		"/D/Dev/paul/portfolio/assets/css/base/index.styl",
+		"/D/dev/paul/portfolio/public/index.html",
+		"/D/dev/paul/portfolio/views/portfolio/index.jade",
+		"/D/Dev/paul/portfolio/portfolio/index.jade",
+		"/C/Users/paulj/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/D/dev/paul/portfolio/assets/css/_settings.styl",
+		"/E/Inbox/Hard Boiled 1992 BDRip 720p Ita Chi x265-NAHOM/info.txt",
+		"/D/Dev/paul/portfolio/portfolio.sublime-project",
+		"/D/dev/paul/portfolio/portfolio.sublime-project",
 		"/D/dev/paul/portfolio/public/css/master.css",
 		"/C/Users/paulj/AppData/Local/Temp/7zO449B010B/ExpandTabsOnSave.py",
 		"/D/Dev/paul/Racket/3e36.rkt",
-		"/D/dev/paul/portfolio/assets/js/main.coffee",
 		"/D/Dev/paul/paul-gallery/js/main.min.js",
 		"/D/dev/paul/portfolio/process.php",
 		"/C/Users/paulj/AppData/Local/Temp/fz3temp-1/process.php",
@@ -202,8 +195,7 @@
 		"/D/VM/vagrant_boxes/Homestead/homestead",
 		"/D/VM/vagrant_boxes/VVV/www/vvv-hosts",
 		"/D/VM/vagrant_boxes/VVV/Vagrantfile",
-		"/D/Dev/paul-portfolio/sass/style.scss",
-		"/D/Dev/paul-portfolio/404.php"
+		"/D/Dev/paul-portfolio/sass/style.scss"
 	],
 	"find":
 	{
@@ -242,130 +234,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/D/dev/paul/portfolio/views/layout.jade",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 998,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								585,
-								900
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": true,
-							"WordCountSyntax": "jade",
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/D/dev/paul/portfolio/portfolio.sublime-project",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 121,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								114,
-								87
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": false,
-							"WordCountSyntax": "json",
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/D/dev/paul/portfolio/views/index.jade",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1168,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								160,
-								160
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": true,
-							"WordCountSyntax": "jade",
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/D/dev/paul/portfolio/assets/css/master.styl",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 212,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								142,
-								142
-							]
-						],
-						"settings":
-						{
-							"WordCountShouldRun": true,
-							"WordCountSyntax": "stylus",
-							"syntax": "Packages/Stylus/Stylus.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
 			]
 		}
 	],

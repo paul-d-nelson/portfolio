@@ -6,7 +6,7 @@ browserify   = require 'roots-browserify'
 css_pipeline = require 'css-pipeline'
 
 module.exports =
-  ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore', '.gitattributes', 'ship.*conf', 'bower.json', '*.sublime-*']
+  ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore', '.gitattributes', 'ship.*conf', 'bower.json', '*.sublime-*', '**/index.styl']
 
   extensions: [
     browserify(files: "assets/js/main.coffee", sourceMap: true, out: 'js/build.js'),
