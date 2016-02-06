@@ -1,3 +1,5 @@
+include ./includes/_mixins.jade
+
 doctype html
 html
 
@@ -10,30 +12,23 @@ html
     meta(name="viewport" content="width=device-width, initial-scale=1")
     script(src='https://www.google.com/recaptcha/api.js', async, defer)
     block title
-      title Paul Nelson's portfolio
+      title Paul Nelson's Portfolio
     != css()
 
   body
     //- include ./includes/_header.jade
     block header
-      header
+      header.main-header
         // Logo
         div.logo
-          | Paul Nelson
+          a(href='')
+            h1 Paul Nelson
 
         // Navigation
         nav#nav
           a#menu-toggle(href='#') Menu
           ul.nav-toggle#menu
             block nav
-              li
-                a(href='#') Home
-              li
-                a(href='#') Home
-              li
-                a(href='#') Home
-              li
-                a(href='#') Home
               li
                 a(href='#') Home
 

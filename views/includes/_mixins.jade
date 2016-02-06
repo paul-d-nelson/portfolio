@@ -1,0 +1,16 @@
+mixin portfolio-item(title, url, img, ...skills)
+  section.portfolio-item
+    h3= title
+    img(src=img)
+    block
+    .button
+      a(href=url) View Site
+    ul
+      each skill in skills
+        li= skill
+
+mixin nav-items(...items)
+  ul
+  each item in items
+    li
+      a.nav-link(href='##{item.toLowerCase()}')= item
