@@ -2,9 +2,13 @@
   position fixed
   top 0
   left 0
-  height 50px
+  height header-height
   width 100%
   overflow hidden
+  background-color transparent
+  transition all 0.5s
+  &.scrolled
+    background-color #000
 
 .logo
   center-vertically()
@@ -32,7 +36,6 @@
   font-size 1.8rem
   position relative
   display inline-block
-  // outline none
   padding 8px 0
   &::after
     position absolute

@@ -3,7 +3,44 @@ $           = require('jquery')
 
 # smartquotes()
 
+$(window).scroll ->
+  if $(window).scrollTop() > 0
+    $('.main-header').addClass 'scrolled'
+  else
+    $('.main-header').removeClass 'scrolled'
+
+# Highlight on Scroll
+#
+# Creates a list of the document sections, and then calculates whether the section
+# is inside the current view. If so, adds an 'active' class to the element which
+# we can use in our styles.
+
+# Create an array of the document section hrefs
+sections = ['#work', '#about', '#contact']
+
+$(window).scroll ->
+  windowPos       = $(window).scrollTop()
+  windowHeight    = $(window).height()
+  documentHeight  = $(document).height()
+
+  for section in sections
+    divPos    = $(section).offset().top
+    divHeight = $(section).height()
+    if windowPos >= divPos and windowPos < (divPos + divHeight)
+      $("a[href='#{section}']").addClass 'active'
+    else
+      $("a[href='#{section}']").removeClass 'active'
+
+  if windowPos + windowHeight == documentHeight
+    if not $('nav li:last-child a').hasClass 'active'
+      navActiveCurrent = $('.active').attr 'href'
+      $("a[href='#{navActiveCurrent}']").removeClass 'active'
+      $('nav li:last-child a').addClass 'active'
+
 # AJAX Form
+#
+# Uses jQuery to parse the form data and then send it to a PHP mailer file
+# using AJAX.
 
 # Get the form.
 form = $('#form-contact')
@@ -21,7 +58,7 @@ $(form).submit (event) ->
 
   $.ajax(
     type: 'POST'
-    url: $(form).attr('action')
+    url: $(form).attr 'action'
     data: formData
   ).done((response) ->
     # Make sure that the formMessages div has the 'success' class.
