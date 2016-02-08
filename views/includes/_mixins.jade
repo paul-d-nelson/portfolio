@@ -1,13 +1,22 @@
+mixin div-image(className, img, fade)
+  if fade
+    div(style='background-image:url("img/#{img}")' class="#{className} wow fadeIn")
+  else
+    div(style='background-image:url("img/#{img}")' class="#{className}")
+
 mixin portfolio-item(title, url, img, ...skills)
   section.portfolio-item
     h3= title
-    img(src=img)
+    //- img(src=img)
+    //- .portfolio-img(style='background-image:url("img/#{img}")' class='wow fadeIn')
+    +div-image('portfolio-img', img, true)
     block
     .button
       a(href=url) View Site
-    ul
-      each skill in skills
-        li= skill
+    .center-skill
+      ul.skill-list
+        each skill in skills
+          li= skill
 
 mixin nav-items(...items)
   ul
