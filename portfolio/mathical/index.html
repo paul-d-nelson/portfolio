@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head> <!-- CHANGE THIS JS LINK -->
+<script type="text/javascript" src="math_worksheet.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700|UnifrakturCook:700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="math_worksheet.css">
+<meta charset="UTF-8">
+<title></title>
+</head>
+
+<body>
+<section id="test">
+  <h1>Mathical Journey</h1>
+  <p>Health: <span id="health"></span></p>
+  <div id="rpg">
+    <img id="hero" src="img/hero_idle.gif"><img id="enemy" src="img/goblin_idle.gif">
+  </div>
+  <div id="debug">
+  </div>
+
+  <div id="start">
+  <input type="button" class="btn" id="start-button" value="Start your journey!">
+  </div>
+
+  <div id="math-question">
+  <p>Question <span id="quest-num"></span> of <span id="quest-total"></span></p>
+    <table>
+      <tr>
+        <td><input type="text" id="carry"></td><td></td>
+      </tr>
+      <tr>
+        <td></td><td id="num-a">12</td>
+      </tr>
+      <tr>
+        <td id="add-or-sub">+</td><td id="num-b">45</td>
+      </tr>
+    </table>
+    <input type="text" id="answer">
+    <input type="button" class="btn2" id="submit" value="Submit">
+  </div>
+</section>
+
+<section id="winning-screen">
+<h1>You Win!</h1>
+<p><img src="img/gold_pile.gif"></p>
+</section>
+
+<section id="losing-screen">
+<h1>You Lose</h1>
+<p><img src="img/skull.gif"></p>
+</section>
+<footer>
+  &#169; <script type="text/javascript">var d = new Date();document.write(d.getFullYear());</script> Paul Nelson; art from <a href="http://opengameart.org/">OpenGameArt</a>, dragon by Redshrike and Surt, Gold Skull by Cameron 'cron' Fraser, and Gold by Clint Bellanger.
+</footer>
+</body>
+</html>

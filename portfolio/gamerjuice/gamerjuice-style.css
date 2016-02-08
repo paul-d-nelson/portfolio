@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* CSS Document */
+/*  @author: Paul Nelson
+ *  @date: 4-24-2014
+ */
+
+body {
+    width: 1024px;
+    margin: auto;
+    background: #0d0c00;
+    font-family: arial, helvetica, sans-serif;
+    color: white;
+}
+
+nav {
+    width: 1024px;
+    height: 100px;
+    background: -webkit-linear-gradient(#0d0c00, #434339);
+    background: -o-linear-gradient(#0d0c00, #434339);
+    background: -moz-linear-gradient(#0d0c00, #434339);
+    background: linear-gradient(#0d0c00, #434339);
+    border-radius: 3px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    float: left;
+}
+
+nav a {
+    display: block;
+    width: 80px;
+    height: 20px;
+    margin: 0px 5px;
+    padding: 40px 10px;
+    text-decoration:none;
+    font-weight: 700;
+    text-shadow: 1px 1px 10px #0d0c00;
+}
+
+nav a:link {
+    color: #fff200;
+}
+nav a:hover {
+    box-shadow: 1px 1px 10px #0d0c00;
+    background: -webkit-linear-gradient(#141308, #4c4b41);
+    background: -o-linear-gradient(#141308, #4c4b41);
+    background: -moz-linear-gradient(#141308, #4c4b41);
+    background: linear-gradient(#141308, #4c4b41);
+}
+nav a:visited {
+    color: #fff200;
+}
+
+article {
+    background: -webkit-linear-gradient(#141308, #434339);
+    background: -o-linear-gradient(#141308, #434339);
+    background: -moz-linear-gradient(#141308, #434339);
+    background: linear-gradient(#141308, #434339);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+
+img {
+    border-radius: 3px;
+}
+
+h1 {
+    color: #fff200;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 10px #0d0c00;
+}
+
+footer {
+    padding: 10px;
+}

@@ -1,0 +1,53 @@
+<!doctype html>
+<!-- Created by: Paul Nelson -->
+<html>
+<head>
+<script type="text/javascript" src="nelson-pet-dog.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<style>
+body {
+    max-width: 55em;
+    margin: auto;
+    background-color: #8AB7F0;
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	font-family: 'Montserrat', sans-serif;
+}
+section {
+    background-color: #F0FEFF;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 3px;
+}
+#description {
+	text-align: center;
+}
+p {
+	text-align: center;
+	font-size: 1.5em;
+}
+h1 {
+	font-size: 3em;
+}
+</style>
+<meta charset="UTF-8">
+<title>Your Pet Dog</title>
+</head>
+
+<body>
+<section>
+<h1>Your Pet Dog</h1>
+<p><img id="main_image" src="img/Dog_Default.png" alt="Your pet dog"></p>
+<p>
+<img src="img/ball.png" alt="Throw Ball" onclick="Spot.throw_ball()" onmouseover="throw_ball_text()" onmouseout="default_text()">
+<img src="img/bone.png" alt="Give the dog a Bone" onclick="Spot.give_bone()" onmouseover="give_bone_text()" onmouseout="default_text()">
+<img src="img/leash.png" alt="Take the dog for a walk" onclick="Spot.walk()" onmouseover="walk_text()" onmouseout="default_text()">
+<img src="img/pet.png" alt="Pet the dog" onclick="Spot.pet()" onmouseover="pet_text()" onmouseout="default_text()">
+<img src="img/roll_over.png" alt="Make the dog roll over" onclick="Spot.roll_over()" onmouseover="roll_over_text()" onmouseout="default_text()">
+</p>
+<p id="description">Click on an image to play with Spot.</p>
+<footer>Designed by Paul Nelson<footer>
+</section>
+</body>
+</html>

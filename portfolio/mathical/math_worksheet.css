@@ -1,0 +1,134 @@
+body {
+    max-width: 55em;
+    margin: auto;
+    background-color: #E0E0E0;
+    font-family: 'Libre Baskerville', serif;
+}
+section {
+    background-image: url("img/paper.jpg");
+    padding: 15px;
+    margin: 5px;
+    border-radius: 3px;
+}
+table {
+    border-bottom: 1px solid black;
+}
+td {
+    text-align: right;
+}
+#rpg {
+    height: 210px;
+}
+
+input#carry {
+    width: 12px;
+}
+input#answer {
+    width: 3em;
+    margin: 3px;
+}
+
+div#rpg {
+    position: relative;
+    margin: 5px;
+    overflow: hidden;
+}
+#rpg img {
+    position: absolute;
+    bottom: 0;
+}
+img#enemy {
+    /*opacity: 0;*/
+}
+img#hero {
+    left: 100px;
+}
+h1 {
+    font-size: 3em;
+    font-family: 'UnifrakturCook', cursive;
+    text-align: center;
+}
+
+#test h1 + p {
+    margin-left: 100px;
+}
+div#start {
+    text-align: center;
+}
+
+#math-question {
+    margin-left: auto;
+    margin-right: auto;
+    width: 9em;
+}
+
+#winning-screen p {
+    text-align: center;
+}
+#losing-screen p {
+    text-align: center;
+}
+
+.btn {
+    border: 0;
+    background: #e6cb73;
+    background-image: -webkit-linear-gradient(top, #e6cb73, #c29525);
+    background-image: -moz-linear-gradient(top, #e6cb73, #c29525);
+    background-image: -ms-linear-gradient(top, #e6cb73, #c29525);
+    background-image: -o-linear-gradient(top, #e6cb73, #c29525);
+    background-image: linear-gradient(to bottom, #e6cb73, #c29525);
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: 'UnifrakturCook', cursive;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    border: 0;
+    background: #e0c57f;
+    background-image: -webkit-linear-gradient(top, #e0c57f, #b08837);
+    background-image: -moz-linear-gradient(top, #e0c57f, #b08837);
+    background-image: -ms-linear-gradient(top, #e0c57f, #b08837);
+    background-image: -o-linear-gradient(top, #e0c57f, #b08837);
+    background-image: linear-gradient(to bottom, #e0c57f, #b08837);
+    text-decoration: none;
+}
+
+.btn2 {
+    border: 0;
+    background: #e6cb73;
+    background-image: -webkit-linear-gradient(top, #e6cb73, #c29525);
+    background-image: -moz-linear-gradient(top, #e6cb73, #c29525);
+    background-image: -ms-linear-gradient(top, #e6cb73, #c29525);
+    background-image: -o-linear-gradient(top, #e6cb73, #c29525);
+    background-image: linear-gradient(to bottom, #e6cb73, #c29525);
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: Georgia;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+}
+
+.btn2:hover {
+    border: 0;
+    background: #e0c57f;
+    background-image: -webkit-linear-gradient(top, #e0c57f, #b08837);
+    background-image: -moz-linear-gradient(top, #e0c57f, #b08837);
+    background-image: -ms-linear-gradient(top, #e0c57f, #b08837);
+    background-image: -o-linear-gradient(top, #e0c57f, #b08837);
+    background-image: linear-gradient(to bottom, #e0c57f, #b08837);
+    text-decoration: none;
+}
+
+footer {
+    padding: 7px;
+    font-size: .7em;
+    font-style: italic;
+}
