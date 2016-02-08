@@ -1,6 +1,7 @@
 {
-  "name": "-portfolio",
-  "description": "My web development portfolio website.",
+  "name": "paul-portfolio",
+  "version": "0.0.1",
+  "description": "Paul Nelson's web development portfolio website.",
   "dependencies": {
     "autoprefixer-stylus": "0.8.x",
     "axis": "0.5.x",
