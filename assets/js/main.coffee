@@ -3,13 +3,20 @@ $           = require('jquery')
 
 # smartquotes()
 
-# FIXME: Move the following code into one scroll event
-$(window).scroll ->
-  # If the user has scrolled down the page, add a class to the header
-  if $(window).scrollTop() > 0
-    $('.main-header').addClass 'scrolled'
-  else
-    $('.main-header').removeClass 'scrolled'
+new WOW().init()
+
+
+# Smooth scroll to the section clicked on in the header nav
+$('#nav a[href^="#"]').click ->
+  if (location.pathname.replace(/^\//,'') is @pathname.replace(/^\//,'')) or location.hostname is @hostname
+
+    target = $(@hash)
+    target = if target.length then target else $("[name=#{@hash.slice(1)}]")
+    headerHeight = $('.main-header').height()
+    if target.length
+      $('html,body').animate {scrollTop: target.offset().top - headerHeight}, 1000
+      return false
+  return
 
 # Highlight on Scroll
 #
@@ -42,6 +49,13 @@ $(window).scroll ->
       navActiveCurrent = $('.active').attr 'href'
       $("a[href='#{navActiveCurrent}']").removeClass 'active'
       $('nav li:last-child a').addClass 'active'
+
+  # If the user has scrolled down the page, add a class to the header
+  if $(window).scrollTop() > 0
+    $('.main-header').addClass 'scrolled'
+  else
+    $('.main-header').removeClass 'scrolled'
+
 
 # AJAX Form
 #
