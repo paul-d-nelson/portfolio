@@ -3,7 +3,9 @@ $           = require('jquery')
 
 # smartquotes()
 
+# FIXME: Move the following code into one scroll event
 $(window).scroll ->
+  # If the user has scrolled down the page, add a class to the header
   if $(window).scrollTop() > 0
     $('.main-header').addClass 'scrolled'
   else
@@ -11,13 +13,14 @@ $(window).scroll ->
 
 # Highlight on Scroll
 #
-# Creates a list of the document sections, and then calculates whether the section
-# is inside the current view. If so, adds an 'active' class to the element which
-# we can use in our styles.
+# Creates a list of the document sections, and then calculates whether the
+# section is inside the current view. If so, adds an 'active' class to the
+# element which we can use in our styles.
 
 # Create an array of the document section hrefs
 sections = ['#work', '#about', '#contact']
 
+# On scroll
 $(window).scroll ->
   windowPos       = $(window).scrollTop()
   windowHeight    = $(window).height()
@@ -26,11 +29,14 @@ $(window).scroll ->
   for section in sections
     divPos    = $(section).offset().top
     divHeight = $(section).height()
+
+    # If we are looking at the section
     if windowPos >= divPos and windowPos < (divPos + divHeight)
       $("a[href='#{section}']").addClass 'active'
     else
       $("a[href='#{section}']").removeClass 'active'
 
+  # If we are at the bottom of the window
   if windowPos + windowHeight == documentHeight
     if not $('nav li:last-child a').hasClass 'active'
       navActiveCurrent = $('.active').attr 'href'
@@ -82,6 +88,7 @@ $(form).submit (event) ->
     if data.responseText != ''
       $(formMessages).text data.responseText
     else
-      $(formMessages).text 'Oops! An error occured and your message could not be sent.'
+      $(formMessages).text 'Oops! An error occured and your message could not
+        be sent.'
     return
   return
