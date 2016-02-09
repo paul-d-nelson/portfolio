@@ -1,7 +1,7 @@
 smartquotes = require('smartquotes')
 $           = require('jquery')
 
-# smartquotes()
+smartquotes()
 
 new WOW().init()
 
