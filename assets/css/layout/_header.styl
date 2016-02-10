@@ -4,10 +4,11 @@
   left 0
   height header-height
   width 100%
-  // overflow hidden
   background-color transparent
   transition all 0.5s
   &.scrolled
+    background-color header-background
+  +below(rupture.desktop-cutoff)
     background-color header-background
 
 .logo

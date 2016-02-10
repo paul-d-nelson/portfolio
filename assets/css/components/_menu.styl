@@ -1,12 +1,8 @@
-#nav
-  // position absolute
-  // top 20px
-  //
-
 #menu-toggle
+  reset-link()
   cursor pointer
   position absolute
-  right 20px
+  right body-padding
   top 3px
   +below(rupture.desktop-cutoff)
     display block
@@ -20,43 +16,64 @@
   position absolute
   overflow hidden
   right 0
-  transition all .5s
+  transition max-height .5s
   +below(rupture.desktop-cutoff)
     reset-list()
     max-height 0
     top header-height
     text-align right
-    background-color white
-    a
-      width 150px
-      padding-right 20px
+    background-color header-background
   +above(rupture.desktop-cutoff)
     center-vertically()
-    max-height 200px
-    inline-list 40px
+    inline-list 5px
+    max-height menu-height
+    right body-padding
   &.menu-visible
-    max-height 200px
+    max-height menu-height
 
 .nav-link
   reset-link()
   font-size 1.8rem
   position relative
   display inline-block
-  padding 8px 0
+  padding 8px 20px
+  transition all .3s
+  &:hover
+  &.active
+    background-color nav-link-background
+    color text-light
+
+  +below(rupture.desktop-cutoff)
+    width 150px
+    padding-right body-padding
+
   +above(rupture.desktop-cutoff)
-    &::after
-      position absolute
-      top 100%
-      left 0
-      width 100%
-      height 2px
-      background rgba(0,0,0,0.2)
-      content ''
-      opacity 0
-      transition opacity 0.3s, transform 0.3s
-      transform translateY(10px)
-    &:hover::after
-    &:focus::after
-    &.active::after
-      opacity 1
-      transform translateY(-5px)
+    border-radius corner-radius
+
+  // Mobile menu link styles
+  // +below(rupture.desktop-cutoff)
+  // .menu-visible &
+  //   transition all .3s
+  //   &:hover
+  //   &.active
+  //     background-color nav-link-background
+  //     color text-light
+
+  // Desktop menu link styles
+  // +above(rupture.desktop-cutoff)
+  //   &::after
+  //     position absolute
+  //     top 100%
+  //     left 0
+  //     width 100%
+  //     height 2px
+  //     background rgba(0,0,0,0.2)
+  //     content ''
+  //     opacity 0
+  //     transition opacity 0.3s, transform 0.3s
+  //     transform translateY(10px)
+  //   &:hover::after
+  //   &:focus::after
+  //   &.active::after
+  //     opacity 1
+  //     transform translateY(-5px)
