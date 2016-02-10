@@ -1,11 +1,13 @@
 smartquotes = require('smartquotes')
 $           = require('jquery')
 
+# This website is smarter than Word.
 smartquotes()
 
+# WOW! Much animate.
 new WOW().init()
 
-
+# Toggle the mobile menu
 $('#menu-toggle').click ->
   $('#menu').toggleClass 'menu-visible'
 
@@ -35,14 +37,13 @@ $(window).scroll ->
   windowPos       = $(window).scrollTop()
   windowHeight    = $(window).height()
   documentHeight  = $(document).height()
-  headerHeight    = $('.main-header').height()
+  headerHeight    = $('.main-header').height() + 5
 
   for section in sections
     divPos    = $(section).offset().top
     divHeight = $(section).height()
 
-    # If we are looking at the section
-    #
+    # Triggers if we are looking at the section.
     # This should account for the height of the header, since it will hide the
     # top x-many pixels from view when opaque.
     if windowPos >= (divPos - headerHeight) and windowPos < (divPos - headerHeight + divHeight)
