@@ -42,7 +42,10 @@ $(window).scroll ->
     divHeight = $(section).height()
 
     # If we are looking at the section
-    if windowPos >= divPos and windowPos < (divPos + divHeight)
+    #
+    # This should account for the height of the header, since it will hide the
+    # top x-many pixels from view when opaque.
+    if windowPos >= (divPos - headerHeight) and windowPos < (divPos - headerHeight + divHeight)
       $("a[href='#{section}']").addClass 'active'
     else
       $("a[href='#{section}']").removeClass 'active'
