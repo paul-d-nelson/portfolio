@@ -6,8 +6,11 @@ smartquotes()
 new WOW().init()
 
 
+$('#menu-toggle').click ->
+  $('#menu').toggleClass 'menu-visible'
+
 # Smooth scroll to the section clicked on in the header nav
-$('#nav a[href^="#"]').click ->
+$('#nav a[href^="#"]:not(a[href="#"])').click ->
   if (location.pathname.replace(/^\//,'') is @pathname.replace(/^\//,'')) or location.hostname is @hostname
 
     target = $(@hash)
@@ -32,6 +35,7 @@ $(window).scroll ->
   windowPos       = $(window).scrollTop()
   windowHeight    = $(window).height()
   documentHeight  = $(document).height()
+  headerHeight    = $('.main-header').height()
 
   for section in sections
     divPos    = $(section).offset().top
@@ -93,7 +97,7 @@ $(form).submit (event) ->
     $('#email').val ''
     $('#message').val ''
     return
-  ).fail (data) ->
+  ).fail(data) ->
     # Make sure that the formMessages div has the 'error' class.
     $(formMessages).removeClass 'success'
     $(formMessages).addClass 'error'
