@@ -65,7 +65,7 @@ $(document).ready ->
         $('nav li:last-child a').addClass 'active'
 
     # If the user has scrolled down the page, add a class to the header
-    if $(window).scrollTop() > 0
+    if $(window).scrollTop() > $('.fold').offset().top + $('.fold').height() - headerHeight
       $('.main-header').addClass 'scrolled'
     else
       $('.main-header').removeClass 'scrolled'
