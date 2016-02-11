@@ -11,8 +11,7 @@ mixin portfolio-item(title, url, img, ...skills)
     //- .portfolio-img(style='background-image:url("img/#{img}")' class='wow fadeIn')
     +div-image('portfolio-img', img, true)
     block
-    .button
-      a(href=url) View Site
+    a.portfolio-link(href=url) View Site
     .center-skill
       ul.skill-list
         each skill in skills
