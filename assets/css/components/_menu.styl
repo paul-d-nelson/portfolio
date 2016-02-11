@@ -12,24 +12,41 @@
     content '\f0c9'
     font 42px fontawesome
 
+
 #menu
   position absolute
   overflow hidden
   right 0
-  transition max-height .5s
+  // transition max-height .5s
+  transition right .5s
   +below(rupture.desktop-cutoff)
     reset-list()
-    max-height 0
+    width menu-width
+    height 100vh
+    // max-height 0
     top header-height
+    right: -(@width)
     text-align right
     background-color header-background
   +above(rupture.desktop-cutoff)
     center-vertically()
     inline-list 5px
-    max-height menu-height
+    // max-height menu-height
     right body-padding
   &.menu-visible
-    max-height menu-height
+    // max-height menu-height
+    right 0
+
+
++below(rupture.desktop-cutoff)
+  main
+    position absolute
+    right 0
+    overflow-x hidden
+    transition right .5s
+    &.menu-visible
+      right menu-width
+
 
 .nav-link
   reset-link()
@@ -44,7 +61,7 @@
     color text-light
 
   +below(rupture.desktop-cutoff)
-    width 150px
+    width 100%
     padding-right body-padding
 
   +above(rupture.desktop-cutoff)
