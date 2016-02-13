@@ -28,7 +28,7 @@
 		}
 
 		// Check that data was sent to the mailer.
-		if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+		if ( empty($name) OR empty($message) OR empty($email)) {
 			// Set a 400 (bad request) response code and exit.
 			http_response_code(400);
 			echo "Oops! There was a problem with your submission. Please complete the form and try again.";
@@ -36,7 +36,6 @@
 		}
 
 		// Set the recipient email address.
-		// FIXME: Update this to your desired email address.
 		$recipient = "pauljimmyclarence@gmail.com";
 
 		// Set the email subject.

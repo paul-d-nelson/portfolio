@@ -89,12 +89,11 @@ $(document).ready ->
 
     # Serialize the form data.
     formData = $(form).serialize()
+    formURL  = $(form).attr 'action'
 
-    $.ajax(
-      type: 'POST'
-      url: $(form).attr 'action'
-      data: formData
-    ).done((response) ->
+    posting = $.post(formURL, formData)
+
+    posting.done (response) ->
       # Make sure that the formMessages div has the 'success' class.
       $(formMessages).removeClass 'error'
       $(formMessages).addClass 'success'
@@ -107,16 +106,16 @@ $(document).ready ->
       $('#email').val ''
       $('#message').val ''
       return
-    ).fail(data) ->
+
+    posting.fail (xhr, status, error) ->
       # Make sure that the formMessages div has the 'error' class.
       $(formMessages).removeClass 'success'
       $(formMessages).addClass 'error'
 
       # Set the message text.
-      if data.responseText != ''
-        $(formMessages).text data.responseText
+      if xhr.responseText != ''
+        $(formMessages).text xhr.responseText
       else
         $(formMessages).text 'Oops! An error occured and your message could not
           be sent.'
       return
-    return

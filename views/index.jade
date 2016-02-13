@@ -29,22 +29,22 @@ block content
   section#contact
     h2 Contact
 
-    #form-messages
+    //- TODO: Remove the class and text when put into production
+    #form-messages.error This is what an error message will look like.
 
     form#form-contact(method='post', action='process.php')
-      .form-field
-        label(for='email') Email
-        input(type='email', name='email', id='email', required)
+      .form-field.contact-name
+        label.screen-reader(for='name') Name
+        input(type='text', name='name', id='name', placeholder='Name (Required)' required)
 
-      .form-field
-        label(for='name') Name
-        input(type='text', name='name', id='name', required)
+      .form-field.contact-email
+        label.screen-reader(for='email') Email
+        input(type='email', name='email', id='email', placeholder='Email (Required)', required)
 
-      .form-field
-        label(for='message') Message
-        textarea(name='message', id='message', required)
+      .form-field.contact-message
+        label.screen-reader(for='message') Message
+        textarea(name='message', id='message', placeholder='Type your message here.' required)
 
       .g-recaptcha(data-sitekey='6LdMNxcTAAAAAB1Oo76b0Jpci3cErw44B0XL1HIY')
 
-      .form-field
-        input.button(type='submit')
+      input.button(type='submit')
