@@ -1,7 +1,7 @@
 extends layout
 
 block nav
-  +nav-items('Work', 'About', 'Contact')
+  +nav-items('Work', 'About', 'Skills', 'Contact')
 
 block fold
   .fold(class='wow fadeIn')
@@ -25,6 +25,36 @@ block content
     h2 About
 
     include:marked ../sections/_about.md
+
+    a.download-pdf(href='resume.pdf') Download my Resume
+
+  section#skills
+    h2 Skills
+
+    .skills
+      h3 Programming/Web
+      ul
+        li HTML5 &amp; CSS3
+        li SASS/Stylus
+        li JavaScript/CoffeeScript
+        li WordPress/PHP
+        li Node.js
+        li Git
+        li Bootstrap
+        li jQuery
+        li Advanced Custom Fields
+        li Divi
+
+    .skills
+      h3 Software
+      ul
+        li Asana
+        li Google Drive
+        li Microsoft Visual Studio
+        li Photoshop/Lightroom
+        li After Effects
+        li Premiere Pro
+        li InDesign
 
   section#contact
     h2 Contact

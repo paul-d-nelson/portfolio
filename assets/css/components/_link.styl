@@ -1,0 +1,48 @@
+.portfolio-link
+  +below(rupture.desktop-cutoff)
+    display block
+  +above(rupture.desktop-cutoff)
+    display none
+  &:after
+    content: '\f105'
+    font-family: FontAwesome
+    font-style: normal
+    font-weight: normal
+    text-decoration: inherit
+    position: relative
+    left: 5px
+
+.download-pdf
+  &:before
+    content: '\f1c1'
+    font-family: FontAwesome
+    font-style: normal
+    font-weight: normal
+    text-decoration: inherit
+    position: relative
+    right: 5px
+
+.mtlink
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  font-size: 2rem
+  background-color: transparent-black
+  color: white
+  opacity: 0
+  z-index: 1
+  transition: opacity .3s
+  &:hover
+    opacity: 1
+  span
+    center-both()
+    &:before
+      content: '\f0ac'
+      font-family: FontAwesome
+      font-style: normal
+      font-weight: normal
+      text-decoration: inherit
+      position: relative
+      right: 5px

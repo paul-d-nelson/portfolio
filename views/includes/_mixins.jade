@@ -1,4 +1,4 @@
-mixin div-image(className, img, fade)
+mixin div-image(className, img, href, fade)
   if fade
     div(style='background-image:url("img/#{img}")' class="#{className} wow fadeIn")
   else
@@ -9,7 +9,10 @@ mixin portfolio-item(title, url, img, ...skills)
     h3= title
     //- img(src=img)
     //- .portfolio-img(style='background-image:url("img/#{img}")' class='wow fadeIn')
-    +div-image('portfolio-img', img, true)
+    .portfolio-img(style='background-image:url("img/#{img}")' class="wow fadeIn")
+      a(href=url)
+        span.mtlink
+          span View Site
     block
     a.portfolio-link(href=url) View Site
     .center-skill
