@@ -24,6 +24,8 @@ block content
   section#about
     h2 About
 
+    +div-image('profile', 'profile.jpg', true)
+
     include:marked ../sections/_about.md
 
     a.download-pdf(href='resume.pdf') Download my Resume
@@ -60,7 +62,7 @@ block content
     h2 Contact
 
     //- TODO: Remove the class and text when put into production
-    #form-messages.error This is what an error message will look like.
+    #form-messages.success This is what a success message will look like.
 
     form#form-contact(method='post', action='process.php')
       .form-field.contact-name
