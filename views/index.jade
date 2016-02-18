@@ -1,7 +1,7 @@
 extends layout
 
 block nav
-  +nav-items('Work', 'About', 'Skills', 'Contact')
+  +nav-items('Work', 'About', 'Contact')
 
 block fold
   .fold(class='wow fadeIn')
@@ -28,30 +28,40 @@ block content
 
     include:marked ../sections/_about.md
 
-    a.download-pdf(href='resume.pdf') Download my Resume
+    a.download-pdf(href='resume.pdf') Download my Résumé
 
   section#skills
-    h2 Skills
+    //- h2 Skills
 
     .skills
-      h3 Programming/Web
+      h3 Languages
       ul
         li HTML5 &amp; CSS3
-        li SASS/Stylus
-        li JavaScript/CoffeeScript
-        li WordPress/PHP
-        li Node.js
-        li Git
-        li Bootstrap
-        li jQuery
-        li Advanced Custom Fields
-        li Divi
+        li Jade
+        li SASS
+        li Stylus
+        li JavaScript
+        li CoffeeScript
+        li PHP
 
     .skills
-      h3 Software
+      h3 Libraries/Frameworks
       ul
-        li Asana
-        li Google Drive
+        li jQuery
+        li _underscores
+        li Bootstrap
+        li Jeet
+        li Axis
+        li Rupture
+
+    .skills
+      h3 Tools
+      ul
+        li WordPress
+        li Advanced Custom Fields
+        li Divi
+        li Node.js
+        li Git
         li Microsoft Visual Studio
         li Photoshop/Lightroom
         li After Effects
@@ -62,7 +72,7 @@ block content
     h2 Contact
 
     //- TODO: Remove the class and text when put into production
-    #form-messages.success This is what a success message will look like.
+    #form-messages
 
     form#form-contact(method='post', action='process.php')
       .form-field.contact-name
@@ -80,3 +90,9 @@ block content
       .g-recaptcha(data-sitekey='6LdMNxcTAAAAAB1Oo76b0Jpci3cErw44B0XL1HIY')
 
       input.button(type='submit')
+
+  section#colophon
+    h2 Colophon
+
+    :marked
+      This website was built using [Roots](http://roots.cx/), a wonderful static website generator that allowed me to write the website using Jade, Stylus, and CoffeeScript. It then converted all of the source into minified and bundled HTML, CSS, and JavaScript. If you want to look at my original source, it can be found on [GitHub](https://github.com/paul-d-nelson/portfolio).
