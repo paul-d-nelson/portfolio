@@ -1,9 +1,14 @@
 .profile
-  // display: inline-block
-  float: left
   width: 200px
-  height: @width
+  height: 200px
   background-size: contain
   border-radius: corner-radius
-  margin-left: -(@width / 2)
   margin-right: 10px
+  margin-bottom: (@margin-right / 2)
+  +above(rupture.mobile-cutoff)
+    float: left
+  // +above(rupture.desktop-cutoff)
+  //   margin-left: -(@width / 2)
+  +below(body-width)
+    width: 120px
+    height: 120px

@@ -14,10 +14,11 @@
     margin: 5px 0
 
 .contact-
-  &name
-    col(1/2)
-  &email
-    col(1/2, cycle: 2)
+  +above(body-width)
+    &name
+      col(1/2)
+    &email
+      col(1/2, cycle: 2)
   &message
     clear: both
     textarea

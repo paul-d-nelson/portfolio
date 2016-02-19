@@ -1,12 +1,12 @@
 .portfolio-img
+  aspect-ratio: 27%
   position: relative
   width 100%
   border-radius corner-radius
-  background-size cover
-  &:before
-    padding-top 27%
-    content ''
-    display block
+  background-position: center
+  background-size: cover
+  +mobile()
+    aspect-ratio: 50%
 
 .center-skill
   text-align center
@@ -15,7 +15,8 @@
   inline-list 40px
   display inline-block
   li
-    padding 3px
-    background tag-background
-    color text-light
-    border-radius corner-radius
+    padding: 3px
+    margin-top: 10px
+    background: tag-background
+    color: text-light
+    border-radius: corner-radius
