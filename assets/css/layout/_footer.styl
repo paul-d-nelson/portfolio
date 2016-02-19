@@ -1,0 +1,24 @@
+footer
+  padding: 40px 0
+  background: black
+  color: text-light
+  ul
+    inline-list: 40px
+    max-width: 300px
+    margin: auto
+
+$icon
+  reset-link()
+  color: white
+  font-size: 3rem
+  line-height: 1.5rem
+  &:hover
+    color: white
+
+.linkedin
+  @extends $icon
+  icon-left: icn-linkedin
+
+.github
+  @extends $icon
+  icon-left: icn-github
