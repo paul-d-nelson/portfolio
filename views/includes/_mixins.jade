@@ -1,8 +1,10 @@
 mixin div-image(className, img, fade)
   if fade
     div(style='background-image:url("img/#{img}")' class="#{className} wow fadeIn")
+      block
   else
     div(style='background-image:url("img/#{img}")' class="#{className}")
+      block
 
 mixin portfolio-item(title, url, img, ...skills)
   section.portfolio-item
