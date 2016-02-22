@@ -20,13 +20,11 @@
   position absolute
   overflow hidden
   right 0
-  // transition max-height .5s
   transition right .5s
   +below(rupture.desktop-cutoff)
     reset-list()
     width menu-width
     height 100vh
-    // max-height 0
     top header-height
     right: -(@width)
     text-align right
@@ -34,10 +32,8 @@
   +above(rupture.desktop-cutoff)
     center-vertically()
     inline-list 5px
-    // max-height menu-height
     right body-padding
   &.menu-visible
-    // max-height menu-height
     right 0
 
 +above(rupture.desktop-cutoff)
@@ -65,7 +61,6 @@
   display: inline-block
   padding 8px 20px 10px
   margin 0 5px
-  // transition all .3s
   &:hover
   &.active
     color text-light
@@ -76,27 +71,16 @@
     right 0
     width 100%
     height 0
-    // background rgba(0,0,0,0.2)
     background white
     content ''
     opacity 0
-    // transition opacity 0.3s, transform 0.3s, width 0.3s
     transition all .3s
-    // transform translateY(10px)
     transform: translateY(-(border-width))
   &:hover::after
   &:focus::after
   &.active::after
     opacity 1
     height border-width
-    // transform translateY(-5px)
-    // width 100%
-
-  // transition all .3s
-  // &:hover
-  // &.active
-    // background-color nav-link-background
-    // color text-light
 
 +below(rupture.desktop-cutoff)
   .nav-link
@@ -109,18 +93,3 @@
     height: 100%
     display: table-cell
     vertical-align: middle
-
-  // +above(rupture.desktop-cutoff)
-  //   border-radius corner-radius
-
-  // Mobile menu link styles
-  // +below(rupture.desktop-cutoff)
-  // .menu-visible &
-  //   transition all .3s
-  //   &:hover
-  //   &.active
-  //     background-color nav-link-background
-  //     color text-light
-
-  // Desktop menu link styles
-  // +above(rupture.desktop-cutoff)

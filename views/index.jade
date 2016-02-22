@@ -5,7 +5,7 @@ block nav
 
 block fold
   +div-image('fold', 'header.jpg', true)
-    p My name is Paul Nelson, and I am a web developer dedicated to creative solutions.
+    p My name is Paul Nelson, and I am a web developer in Arizona dedicated to creative solutions.
 
 block content
   section#work
@@ -18,11 +18,11 @@ block content
     +portfolio-item('MaxFitStrong.com', 'http://maxfitstrong.com/', 'maxfit.jpg', 'WordPress', 'PHP', 'SASS', 'Responsive', 'JavaScript')
       p This website was developed for one of Resound Creative's clients, a personal trainer named Max Pietropaulo. The design was already established in mockups, but it was built from scratch using #[a(href='http://underscores.me/') underscores] as a base.
 
-    +portfolio-item('SusanPuelz.com', 'http://susanpuelz.com/', 'puelz.jpg', 'WordPress', 'PHP', 'SASS', 'JavaScript')
+    +portfolio-item('SusanPuelz.com', 'http://susanpuelz.com/', 'puelz.jpg', 'WordPress', 'PHP', 'SASS', 'Responsive', 'JavaScript')
       p SusanPuelz.com was developed for one of Resound Creative's clients, a watercolor artist named Susan Puelz. It was converted from a fixed-width flash site to a responsive design built on WordPress and underscores.
 
     +portfolio-item('Stewardship ELP', 'http://www.stewardaz.com/about-stewardship/dave-ramsey-insurance-elp/', 'stewardship.jpg', 'WordPress', 'PHP', 'SASS', 'Responsive')
-      p This one-page website was built from the ground up using an HTML mockup. It uses CSS animations and advanced positioning to create a fluid, responsive layout.
+      p This single-page website was built from the ground up using an HTML mockup. It uses CSS animations and advanced positioning to create a fluid, responsive layout.
 
     +portfolio-item('Mathical Journey', 'portfolio/mathical', 'mathical.jpg', 'HTML5 & CSS3', 'JavaScript')
       p "Mathical Journey" was a single-page website created for a class at ASU. It uses vanilla JavaScript to randomly generate math questions and present them in a fun, unique way.
@@ -67,8 +67,6 @@ block content
         h3 Tools
         ul
           li WordPress
-          li Advanced Custom Fields
-          li Divi
           li Node.js
           li Git
           li Microsoft Visual Studio
@@ -80,7 +78,6 @@ block content
   section#contact
     h2 Contact
 
-    //- TODO: Remove the class and text when put into production
     #form-messages
 
     form#form-contact(method='post', action='process.php')
@@ -104,4 +101,4 @@ block content
     h2 Colophon
 
     :marked
-      This website was built using [Roots](http://roots.cx/), a wonderful static website generator that allowed me to write the website using Jade, Stylus, and CoffeeScript. It then converted all of the source into minified and bundled HTML, CSS, and JavaScript. If you want to look at my original source, it can be found on [GitHub](https://github.com/paul-d-nelson/portfolio).
+      This website was built using [Roots](http://roots.cx/), a wonderful static website generator that allowed me to write the website using Jade, Stylus, and CoffeeScript. It then converted all of the source files into minified and bundled HTML, CSS, and JavaScript. If you want to look at my original source, it can be found on [GitHub](https://github.com/paul-d-nelson/portfolio).
