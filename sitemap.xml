@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>http://paulnelsondev.com/</loc>
+    <image:image>
+       <image:loc>http://paulnelsondev.com/img/resound.jpg</image:loc>
+       <image:caption>The website developed for Resound Creative using WordPress and Roots</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://paulnelsondev.com/img/maxfit.jpg</image:loc>
+       <image:caption>The website developed for MaxFit using WordPress and underscores</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://paulnelsondev.com/img/puelz.jpg</image:loc>
+       <image:caption>The website developed for Susan Puelz using WordPress and underscores</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://paulnelsondev.com/img/stewardship.jpg</image:loc>
+       <image:caption>The single-page website developed for Stewardship Insurance using WordPress and PHP</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://paulnelsondev.com/img/mathical.jpg</image:loc>
+       <image:caption>The single-page website developed for a class at ASU using HTML5, CSS3, and vanilla JavaScript</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://paulnelsondev.com/img/brewski.jpg</image:loc>
+       <image:caption>The website developed for a class at ASU using HTML5 and CSS3</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc>http://paulnelsondev.com/img/profile.jpg</image:loc>
+       <image:caption>Profile of Paul Nelson, a web developer in Arizona</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://paulnelsondev.com/resume.pdf</loc>
+  </url>
+  <url>
+    <loc>http://paulnelsondev.com/portfolio/mathical/</loc>
+  </url>
+  <url>
+    <loc>http://paulnelsondev.com/portfolio/brewski/</loc>
+  </url>
+  <url>
+    <loc>http://paulnelsondev.com/portfolio/brewski/amber-ale.html</loc>
+  </url>
+</urlset>
